@@ -21,9 +21,9 @@ app.listen(80, () => {
   console.log("Server is running on port 80");
 });
 mongoose
-  .connect("mongodb://127.0.0.1:27017/newdatabase")
+  .connect("mongodb://127.0.0.1:27017/wobotapp")
   .then(() => {
-    console.log('Connected to database by the name of "newdatabase"');
+    console.log('Connected to database by the name of "wobotapp"');
   })
   .catch((error) => {
     console.log("Connection failed"), console.log(error);
