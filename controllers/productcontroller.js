@@ -16,22 +16,21 @@ exports.fetchproductlist = async (req, res) => {
 };
 
 exports.upload_products = async (req, res) => {
-
   try {
     // parse csv file
     const csv = require("csvtojson");
     const file = req.files[0];
-    console.log({ file })
+    console.log({ file });
     const result = await csv().fromFile(file.path);
-    console.log({ result })
+    console.log({ result });
     // save to db
     for (let i = 0; i < result.length; i++) {
-      var product = productmodel.create({
+      var product = await productmodel.create({
         name: result[i].name,
         description: result[i].description,
         quantity: result[i].quantity,
         price: result[i].price,
-        _createdBy: req.user._id
+        _createdBy: req.user._id,
       });
     }
     res.status(200).json({
