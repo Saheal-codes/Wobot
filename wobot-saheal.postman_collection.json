@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "fe908395-05c6-49ec-ad05-aba291b1c957",
+		"name": "wobot-saheal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Fetch Product List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjgzNGMxNWJlMTQ5ZjhjZjc0NTZiMjQiLCJmaXJzdE5hbWUiOiJQYW5rYWoiLCJsYXN0TmFtZSI6IkciLCJ1c2VybmFtZSI6InBhbmthal9nIiwiY3JlYXRlZEF0IjoiMjAyMi0wNS0xN1QwNzoxNzo0MS4wODVaIiwidXBkYXRlZEF0IjoiMjAyMi0wNS0xN1QwNzoxNzo0MS4wODVaIiwiX192IjowLCJpYXQiOjE2NTI3NzE4NjcsImV4cCI6MTY1Mjc5MzQ2N30.V0Rd7llz0p2eLGTAvdRZEe616AsqlPGljWx0vTvOyj8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/getallProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"getallProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Products CSV",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjgzNGMxNWJlMTQ5ZjhjZjc0NTZiMjQiLCJmaXJzdE5hbWUiOiJQYW5rYWoiLCJsYXN0TmFtZSI6IkciLCJ1c2VybmFtZSI6InBhbmthal9nIiwiY3JlYXRlZEF0IjoiMjAyMi0wNS0xN1QwNzoxNzo0MS4wODVaIiwidXBkYXRlZEF0IjoiMjAyMi0wNS0xN1QwNzoxNzo0MS4wODVaIiwiX192IjowLCJpYXQiOjE2NTI3NzE4NjcsImV4cCI6MTY1Mjc5MzQ2N30.V0Rd7llz0p2eLGTAvdRZEe616AsqlPGljWx0vTvOyj8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "csv file",
+									"type": "file",
+									"src": "/C:/Users/sahil/Downloads/Untitled spreadsheet - Sheet1 (1).csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/products/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"products",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Fetch User List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVmYmFjZTA4MWE3MjEzYTA3Yzc4OGIiLCJmaXJzdE5hbWUiOiJQYW5rYWoiLCJsYXN0TmFtZSI6IkciLCJ1c2VybmFtZSI6InBhbmthal9nIiwiY3JlYXRlZEF0IjoiMjAyMi0wNC0yMFQwNzo0ODozMC42OTRaIiwidXBkYXRlZEF0IjoiMjAyMi0wNC0yMFQwNzo0ODozMC42OTRaIiwiX192IjowLCJpYXQiOjE2NTA0NDEwMDgsImV4cCI6MTY1MDQ2MjYwOH0.QNsNn-U_PfowTFuFZsJA1SovVWE09OlBB19XACstwiE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch User Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjVmYmFjZTA4MWE3MjEzYTA3Yzc4OGIiLCJmaXJzdE5hbWUiOiJQYW5rYWoiLCJsYXN0TmFtZSI6IkciLCJ1c2VybmFtZSI6InBhbmthal9nIiwiY3JlYXRlZEF0IjoiMjAyMi0wNC0yMFQwNzo0ODozMC42OTRaIiwidXBkYXRlZEF0IjoiMjAyMi0wNC0yMFQwNzo0ODozMC42OTRaIiwiX192IjowLCJpYXQiOjE2NTA0NDEwMDgsImV4cCI6MTY1MDQ2MjYwOH0.QNsNn-U_PfowTFuFZsJA1SovVWE09OlBB19XACstwiE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/users/625fbace081a7213a07c788b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"users",
+								"625fbace081a7213a07c788b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Pankaj",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "G",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "pankaj_g",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "g_pankaj",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "pankaj_g",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "g_pankaj",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
