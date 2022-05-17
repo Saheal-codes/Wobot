@@ -21,15 +21,15 @@ exports.upload_products = async (req, res) => {
     const csv = require("csvtojson");
     const file = req.files[0];
     console.log({ file });
-    const result = await csv().fromFile(file.path);
+    var result = await csv().fromFile(file.path);
     console.log({ result });
     // save to db
     for (let i = 0; i < result.length; i++) {
       var product = await productmodel.create({
-        name: result[i].name,
-        description: result[i].description,
-        quantity: result[i].quantity,
-        price: result[i].price,
+        name: result[i].name || result[i].Name,
+        description: result[i].description || result[i].Description,
+        quantity: result[i].quantity || result[i].Quantity,
+        price: result[i].price || result[i].Price,
         _createdBy: req.user._id,
       });
     }
