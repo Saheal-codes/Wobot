@@ -2,7 +2,7 @@ const productmodel = require("../models/productmodel");
 
 exports.fetchproductlist = async (req, res) => {
   try {
-    const result = await productmodel.find({ deleted_at: null });
+    const result = await productmodel.find({});
     res.status(200).json({
       message: "Products read successfully",
       data: result,
